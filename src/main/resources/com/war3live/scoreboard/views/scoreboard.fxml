@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.war3live.scoreboard.controllers.ScoreboardController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.war3live.scoreboard.controllers.ScoreboardController">
    <children>
       <ImageView fitHeight="121.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -67,6 +67,6 @@
       <TextField fx:id="fieldMapName" layoutX="50.0" layoutY="420.0" onKeyPressed="#mapSuggestion" prefHeight="25.0" prefWidth="533.0" promptText="Map name" />
       <Label layoutX="20.0" layoutY="460.0" text="Label" />
       <TextField fx:id="fieldGameLabel" layoutX="57.0" layoutY="456.0" prefHeight="25.0" prefWidth="526.0" promptText="Game Label. Example: Tournament Final (Bo3)" />
-      <Button fx:id="btnSave" layoutX="254.0" layoutY="494.0" mnemonicParsing="false" onAction="#generateFields" prefHeight="25.0" prefWidth="93.0" text="Save" />
+      <Button fx:id="btnSave" layoutX="254.0" layoutY="494.0" mnemonicParsing="false" onAction="#generateFiles" prefHeight="25.0" prefWidth="93.0" text="Save" />
    </children>
 </AnchorPane>

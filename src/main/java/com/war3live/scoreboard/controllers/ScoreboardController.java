@@ -1,16 +1,25 @@
 package com.war3live.scoreboard.controllers;
 
-import java.io.IOException;
+import java.io.File;
 
-import com.war3live.scoreboard.main.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.DirectoryChooser;
 
+/**
+ * Scoreboard Controller
+ * @author KorKux
+ */
 public class ScoreboardController {
+
+    @FXML
+    private AnchorPane root;
+
     @FXML
     private TextField fieldFolderPath;
 
@@ -62,13 +71,24 @@ public class ScoreboardController {
     @FXML
     private Button btnSave;
 
+    /**
+     * Returns the path of the selected directory and maps it to the directory field
+     * @param event: onAction Event
+     */
     @FXML
-    void chooseFolder(ActionEvent event) {
-
+    public void chooseFolder(ActionEvent event) {
+        try{
+            DirectoryChooser directoryChooser = new DirectoryChooser();
+            directoryChooser.setInitialDirectory(new File(System.getProperty("user.dir")));
+            File selectedFolder = directoryChooser.showDialog(null);
+            fieldFolderPath.setText(selectedFolder.getAbsolutePath());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
-    void generateFields(ActionEvent event) {
+    void generateFiles(ActionEvent event) {
 
     }
 
@@ -111,6 +131,10 @@ public class ScoreboardController {
     void switchPlayers(ActionEvent event) {
 
     }
+
+
+
+
 
 
 }
