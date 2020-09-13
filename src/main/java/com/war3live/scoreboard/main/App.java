@@ -9,9 +9,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- * JavaFX App
+ * Main class that is responsible for starting the project
+ * @author KorKux
  */
 public class App extends Application {
+
 
     private static Scene scene;
 
