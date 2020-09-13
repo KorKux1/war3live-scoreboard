@@ -120,23 +120,47 @@ public class ScoreboardController {
 
     }
 
+    /**
+     * Reset Players nicknames.
+     * @param event: On action Event.
+     */
     @FXML
     public void resetPlayers(ActionEvent event) {
         fieldPlayer1Nickname.setText("");
         fieldPlayer2Nickname.setText("");
     }
 
+    /**
+     * Reset score of the players.
+     * @param event: On action Event.
+     */
     @FXML
     public void resetScore(ActionEvent event) {
         fieldPlayer1Score.setText("0");
         fieldPlayer2Score.setText("0");
     }
 
+    /**
+     * Switch information of the users.
+     * @param event
+     */
     @FXML
-    void switchPlayers(ActionEvent event) {
+    public void switchPlayers(ActionEvent event) {
+        var player1Score = fieldPlayer1Score.getText();
+        var player1Nick = fieldPlayer1Nickname.getText();
 
+        fieldPlayer1Nickname.setText(fieldPlayer2Nickname.getText());
+        fieldPlayer1Score.setText(fieldPlayer2Score.getText());
+
+        fieldPlayer2Nickname.setText(player1Nick);
+        fieldPlayer2Score.setText(player1Score);
     }
 
+    /**
+     * File generator for players information.
+     * @param fileName: Name of the File. Ej: Player1.txt
+     * @param value: Value into the File. Ej: KorKux
+     */
     public void generateFile(String fileName, String value) {
         try {
             File file = new File(fileName);
@@ -155,10 +179,5 @@ public class ScoreboardController {
             e.printStackTrace();
         }
     }
-
-
-
-
-
 
 }
