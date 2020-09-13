@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -20,6 +21,9 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("scoreboard"));
+        stage.setResizable(false);
+        stage.setTitle("War3Live Scoreboard");
+        stage.getIcons().add(new Image(getClass().getResource("/com/war3live/scoreboard/img/icon64x64.png").toExternalForm()));
         stage.setScene(scene);
         stage.show();
     }
