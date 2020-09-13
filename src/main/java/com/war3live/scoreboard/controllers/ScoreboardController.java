@@ -1,9 +1,12 @@
 package com.war3live.scoreboard.controllers;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
@@ -130,6 +133,25 @@ public class ScoreboardController {
     @FXML
     void switchPlayers(ActionEvent event) {
 
+    }
+
+    public void generateFile(String fileName, String value) {
+        try {
+            File file = new File(fileName);
+            FileWriter filewriter = new FileWriter(file);
+            filewriter.write(value);
+            filewriter.close();
+
+        } catch (IOException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error Message");
+            alert.setHeaderText("An error has occurred!");
+            alert.setContentText("An error has occurred generating the files.\n" +
+                                "Please retry.");
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
 
