@@ -121,13 +121,15 @@ public class ScoreboardController {
     }
 
     @FXML
-    void resetPlayers(ActionEvent event) {
-
+    public void resetPlayers(ActionEvent event) {
+        fieldPlayer1Nickname.setText("");
+        fieldPlayer2Nickname.setText("");
     }
 
     @FXML
-    void resetScore(ActionEvent event) {
-
+    public void resetScore(ActionEvent event) {
+        fieldPlayer1Score.setText("0");
+        fieldPlayer2Score.setText("0");
     }
 
     @FXML
