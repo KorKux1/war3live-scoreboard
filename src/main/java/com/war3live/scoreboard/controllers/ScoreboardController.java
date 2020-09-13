@@ -95,14 +95,33 @@ public class ScoreboardController {
 
     }
 
+    /**
+     * Increase the Score of the player 1.
+     * @param event: On action event.
+     */
     @FXML
-    void increasePlayer1Score(ActionEvent event) {
+    public void increasePlayer1Score(ActionEvent event) {
+        try {
+            int score = Integer.parseInt(fieldPlayer1Score.getText());
+            fieldPlayer1Score.setText(""+(score+1));
+        }
+        catch (NumberFormatException e){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Error Message");
+            alert.setHeaderText("An error has occurred!");
+            alert.setContentText("Please enter a valid number.");
+        }
 
     }
 
+    /**
+     * Increase the score of the player 2.
+     * @param event: On action event.
+     */
     @FXML
-    void increasePlayer2Score(ActionEvent event) {
-
+    public void increasePlayer2Score(ActionEvent event) {
+        int score = Integer.parseInt(fieldPlayer2Score.getText());
+        fieldPlayer2Score.setText(""+(score+1));
     }
 
     @FXML
@@ -142,7 +161,7 @@ public class ScoreboardController {
 
     /**
      * Switch information of the users.
-     * @param event
+     * @param event: On action Event.
      */
     @FXML
     public void switchPlayers(ActionEvent event) {
