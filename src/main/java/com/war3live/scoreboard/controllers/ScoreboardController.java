@@ -106,12 +106,8 @@ public class ScoreboardController {
             fieldPlayer1Score.setText(""+(score+1));
         }
         catch (NumberFormatException e){
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Error Message");
-            alert.setHeaderText("An error has occurred!");
-            alert.setContentText("Please enter a valid number.");
+            showAlertMessageNumberFormatError();
         }
-
     }
 
     /**
@@ -120,8 +116,13 @@ public class ScoreboardController {
      */
     @FXML
     public void increasePlayer2Score(ActionEvent event) {
-        int score = Integer.parseInt(fieldPlayer2Score.getText());
-        fieldPlayer2Score.setText(""+(score+1));
+        try {
+            int score = Integer.parseInt(fieldPlayer2Score.getText());
+            fieldPlayer2Score.setText(""+(score+1));
+        }
+        catch (NumberFormatException e){
+            showAlertMessageNumberFormatError();
+        }
     }
 
     @FXML
@@ -129,14 +130,33 @@ public class ScoreboardController {
 
     }
 
+    /**
+     * Reduce the score of the player 1.
+     * @param event: On action event.
+     */
     @FXML
-    void reducePlayer1Score(ActionEvent event) {
-
+    public void reducePlayer1Score(ActionEvent event) {
+        try {
+            int score = Integer.parseInt(fieldPlayer1Score.getText());
+            fieldPlayer1Score.setText(""+(score-1));
+        }
+        catch (NumberFormatException e) {
+            showAlertMessageNumberFormatError();
+        }
     }
 
+    /**
+     * Reduce the score of the player 2.
+     * @param event: On action event.
+     */
     @FXML
-    void reducePlayer2Score(ActionEvent event) {
-
+    public void reducePlayer2Score(ActionEvent event) {
+        try {
+            int score = Integer.parseInt(fieldPlayer2Score.getText());
+            fieldPlayer2Score.setText(""+(score-1));
+        } catch (NumberFormatException e) {
+            showAlertMessageNumberFormatError();
+        }
     }
 
     /**
@@ -197,6 +217,16 @@ public class ScoreboardController {
         catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Show an alert for Formant Number Error.
+     */
+    public void showAlertMessageNumberFormatError(){
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Error Message");
+        alert.setHeaderText("An error has occurred!");
+        alert.setContentText("Please enter a valid number.");
     }
 
 }
