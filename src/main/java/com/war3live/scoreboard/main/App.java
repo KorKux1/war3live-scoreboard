@@ -27,11 +27,7 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
-    public static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
-    }
-
+    
     private static Parent loadFXML(String fxml) throws IOException {
 
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/com/war3live/scoreboard/views/"+fxml + ".fxml"));

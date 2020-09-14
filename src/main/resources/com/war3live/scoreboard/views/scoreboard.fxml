@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.war3live.scoreboard.model.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<?import com.war3live.scoreboard.model.AutocompletionlTextField?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.war3live.scoreboard.controllers.ScoreboardController">
    <children>
       <ImageView fitHeight="121.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
@@ -38,8 +38,6 @@
       <TextField fx:id="fieldPlayer1Score" alignment="CENTER" layoutX="71.0" layoutY="328.0" prefHeight="25.0" prefWidth="93.0" promptText="Player 1 Score" text="0" />
       <Button layoutX="174.0" layoutY="328.0" mnemonicParsing="false" onAction="#increasePlayer1Score" text="+" />
       <Button layoutX="41.0" layoutY="328.0" mnemonicParsing="false" onAction="#reducePlayer1Score" text="-" />
-      <CheckBox allowIndeterminate="true" contentDisplay="TOP" layoutX="331.0" layoutY="262.0" mnemonicParsing="false" />
-      <Label layoutX="255.0" layoutY="262.0" prefHeight="17.0" prefWidth="61.0" text="Auto save" />
       <Button layoutX="254.0" layoutY="283.0" mnemonicParsing="false" onAction="#switchPlayers" prefHeight="25.0" prefWidth="93.0" text="&lt;- SWITCH -&gt;" />
       <Button layoutX="254.0" layoutY="316.0" mnemonicParsing="false" onAction="#resetPlayers" prefHeight="25.0" prefWidth="93.0" text="Reset Players" />
       <Button layoutX="254.0" layoutY="347.0" mnemonicParsing="false" onAction="#resetScore" prefHeight="25.0" prefWidth="93.0" text="Reset Score" />
@@ -57,7 +55,7 @@
       <TextField fx:id="fieldPlayer2Nickname" layoutX="376.0" layoutY="283.0" prefHeight="25.0" prefWidth="143.0" promptText="Player 2 Nickname" />
       <Label layoutX="529.0" layoutY="287.0" text="Nickname" />
       <TextField fx:id="fieldPlayer2Score" alignment="CENTER" layoutX="427.0" layoutY="327.0" prefHeight="25.0" prefWidth="93.0" promptText="Player 2 Score" text="0" />
-      <Button  layoutX="530.0" layoutY="327.0" mnemonicParsing="false" onAction="#increasePlayer2Score" text="+" />
+      <Button layoutX="530.0" layoutY="327.0" mnemonicParsing="false" onAction="#increasePlayer2Score" text="+" />
       <Button layoutX="397.0" layoutY="327.0" mnemonicParsing="false" onAction="#reducePlayer2Score" text="-" />
       <Label layoutX="20.0" layoutY="424.0" text="Map" />
       <AutocompletionlTextField fx:id="fieldMapName" layoutX="50.0" layoutY="420.0" prefHeight="25.0" prefWidth="533.0" promptText="Map name" />
