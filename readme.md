@@ -58,7 +58,7 @@ It's a Scoreboard for Obs Studio. This Scoreboard is intended for the Warcraft 3
 6. In Obs, add the Text Sources. Select Local File and select the .txt files on the file's folder that you selected.
 
 <p align="center">
-<img alt="Add Text on OBS" src="resources/add images on OBS.gif">
+<img alt="Add Text on OBS" src="resources/add text on obs.gif">
 </p>
 
 7. You can change the data and click on the save button, the obs will see the changes and reflect them.
