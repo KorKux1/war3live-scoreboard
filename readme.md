@@ -34,9 +34,15 @@ It's a Scoreboard for Obs Studio. This Scoreboard is intended for the Warcraft 3
 
 ## Screenshots
 
-![Obs Studio War3Live Scoreboard](resources/Obs Studio.png)
+<p align="center">
+  
+<img alt="Obs Studio War3Live Scoreboard" src="resources/Obs Studio.png">
 
-![War3Live Scoreboard](resources/scoreboard.png)
+
+<img alt="War3Live Scoreboard" src="./resources/scoreboard.png">
+
+</p>
+
 
 ## Usage
 1. [Download the lastest version release](https://github.com/KorKux1/war3live-scoreboard/releases).
