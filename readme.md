@@ -50,9 +50,17 @@ It's a Scoreboard for Obs Studio. This Scoreboard is intended for the Warcraft 3
 3. Execute start.bat
 4. Fill in the data you need and click on save button.
 5. In OBS, add the Score images and Map name. Add an image source and upload the images.
-![Add Images on OBS](resources/add images on OBS.gif)
+
+<p align="center">
+<img alt="Add Images on OBS" src="resources/add images on OBS.gif">
+</p>
+
 6. In Obs, add the Text Sources. Select Local File and select the .txt files on the file's folder that you selected.
-![Add Text on OBS](resources/add text on OBS.gif)
+
+<p align="center">
+<img alt="Add Text on OBS" src="resources/add images on OBS.gif">
+</p>
+
 7. You can change the data and click on the save button, the obs will see the changes and reflect them.
 
 ## Setup (Developer Mode)
