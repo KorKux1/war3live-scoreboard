@@ -23,7 +23,7 @@ It's a Scoreboard for Obs Studio. This Scoreboard is intended for the Warcraft 3
 <a href="https://github.com/KorKux1/war3live-scoreboard/stargazers">
 <img alt="GitHub stars" src="https://img.shields.io/github/stars/KorKux1/war3live-scoreboard"></a>
 
-<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/KorKux1/CopyCat">
+<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/KorKux1/war3live-scoreboard">
 
 </p>
 
