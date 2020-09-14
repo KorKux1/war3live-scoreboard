@@ -1,11 +1,9 @@
 package com.war3live.scoreboard.controllers;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-
+import com.war3live.scoreboard.model.AutocompletionlTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -14,11 +12,20 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.DirectoryChooser;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.ResourceBundle;
+
 /**
  * Scoreboard Controller
  * @author KorKux
  */
-public class ScoreboardController {
+public class ScoreboardController implements Initializable {
 
     @FXML
     private AnchorPane root;
@@ -66,7 +73,7 @@ public class ScoreboardController {
     private Button btnReducePlayer2Score;
 
     @FXML
-    private TextField fieldMapName;
+    private AutocompletionlTextField fieldMapName;
 
     @FXML
     private TextField fieldGameLabel;
@@ -126,7 +133,7 @@ public class ScoreboardController {
     }
 
     @FXML
-    void mapSuggestion(KeyEvent event) {
+    public void mapSuggestion(KeyEvent event) {
 
     }
 
@@ -229,4 +236,23 @@ public class ScoreboardController {
         alert.setContentText("Please enter a valid number.");
     }
 
+    /**
+     * Inizializa
+     * @param location:
+     * @param resources:
+     */
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+        String[] mapsArray =  {"Echo Isles","Melting Valley", "Road to Stratholme", "Secret Valley",
+                "Terenas Stand", "Tirisfal Glades", "Broken Shard", "Centaur Grove","Lost Temple","Tidewater Glades",
+                "Turtle Rock", "Twisted Meadows", "Goldshire", "Amazonia", "Concealed Hill" + "Last Refuge", "Northern Isles"
+        };
+
+        List<String> maps = new ArrayList<String>(Arrays.asList(mapsArray));
+
+
+
+        fieldMapName.getEntries().addAll(maps);
+    }
 }
