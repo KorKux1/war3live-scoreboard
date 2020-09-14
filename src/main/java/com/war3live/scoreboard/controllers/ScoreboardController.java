@@ -5,11 +5,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.DirectoryChooser;
 
 import java.io.File;
@@ -28,13 +25,8 @@ import java.util.ResourceBundle;
 public class ScoreboardController implements Initializable {
 
     @FXML
-    private AnchorPane root;
-
-    @FXML
     private TextField fieldFolderPath;
 
-    @FXML
-    private Button btnFolderPath;
 
     @FXML
     private TextField fieldPlayer1Nickname;
@@ -43,34 +35,11 @@ public class ScoreboardController implements Initializable {
     private TextField fieldPlayer1Score;
 
     @FXML
-    private Button btnIncreasePlayer1Score;
-
-    @FXML
-    private Button btnReducePlayer1Score;
-
-    @FXML
-    private CheckBox checkAutoSave;
-
-    @FXML
-    private Button btnSwitchPlayers;
-
-    @FXML
-    private Button btnResetPlayers;
-
-    @FXML
-    private Button btnResetScore;
-
-    @FXML
     private TextField fieldPlayer2Nickname;
 
     @FXML
     private TextField fieldPlayer2Score;
 
-    @FXML
-    private Button btnIncreasePlayer2Score;
-
-    @FXML
-    private Button btnReducePlayer2Score;
 
     @FXML
     private AutocompletionlTextField fieldMapName;
@@ -78,8 +47,6 @@ public class ScoreboardController implements Initializable {
     @FXML
     private TextField fieldGameLabel;
 
-    @FXML
-    private Button btnSave;
 
     /**
      * Returns the path of the selected directory and maps it to the directory field
@@ -145,11 +112,6 @@ public class ScoreboardController implements Initializable {
         catch (NumberFormatException e){
             showAlertMessageNumberFormatError();
         }
-    }
-
-    @FXML
-    public void mapSuggestion(KeyEvent event) {
-
     }
 
     /**
@@ -252,7 +214,7 @@ public class ScoreboardController implements Initializable {
     }
 
     /**
-     * Inizializa
+     * initialize main application with autocomplete
      * @param location:
      * @param resources:
      */

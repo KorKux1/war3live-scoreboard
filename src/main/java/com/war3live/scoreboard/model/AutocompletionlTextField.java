@@ -12,6 +12,11 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
+/**
+ * This class generate a Auto Complete Text Field.
+ * @author Ruslan Gabbazov
+ * @link https://stackoverflow.com/questions/36861056/javafx-textfield-auto-suggestions
+ */
 public class AutocompletionlTextField extends TextField {
 
     //Local variables

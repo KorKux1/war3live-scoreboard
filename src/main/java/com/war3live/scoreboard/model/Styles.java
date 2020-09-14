@@ -6,6 +6,11 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
+/**
+ * This Class have the Styles for Auto Complete Text Field.
+ * @author Ruslan Gabbazov
+ * @link https://stackoverflow.com/questions/36861056/javafx-textfield-auto-suggestions
+ */
 public class Styles {
     /**
      * Build TextFlow with selected text. Return "case" dependent.
