@@ -27,7 +27,7 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
     }
-    
+
     private static Parent loadFXML(String fxml) throws IOException {
 
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/com/war3live/scoreboard/views/"+fxml + ".fxml"));
