@@ -98,8 +98,8 @@ public class ScoreboardController implements Initializable {
     }
 
     /**
-     *
-     * @param event:
+     * Generate Files with the data
+     * @param event: On action Event
      */
     @FXML
     public void generateFiles(ActionEvent event) {
