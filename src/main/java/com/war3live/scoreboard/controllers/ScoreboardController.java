@@ -97,8 +97,23 @@ public class ScoreboardController implements Initializable {
         }
     }
 
+    /**
+     *
+     * @param event:
+     */
     @FXML
-    void generateFiles(ActionEvent event) {
+    public void generateFiles(ActionEvent event) {
+        String path = fieldFolderPath.getText();
+        if (path == null) {
+            path = System.getProperty("user.dir");
+        }
+
+        generateFile(path+"/player1.txt", fieldPlayer1Nickname.getText());
+        generateFile(path+"/player2.txt", fieldPlayer2Nickname.getText());
+        generateFile(path+"/player1Score.txt", fieldPlayer1Score.getText());
+        generateFile(path+"/player2Score.txt", fieldPlayer2Score.getText());
+        generateFile(path+"/map.txt", fieldMapName.getText());
+        generateFile(path+"/gameLabel.txt", fieldGameLabel.getText());
 
     }
 
@@ -250,8 +265,6 @@ public class ScoreboardController implements Initializable {
         };
 
         List<String> maps = new ArrayList<String>(Arrays.asList(mapsArray));
-
-
 
         fieldMapName.getEntries().addAll(maps);
     }
